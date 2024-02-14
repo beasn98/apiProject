@@ -7,4 +7,7 @@ import retrofit2.http.Path
 interface PlayerService {
     @GET("users/{user}")
     fun getPlayerStats(@Path("user") user: String): Call<Player>
+
+    @GET("users/lists/league")
+    fun getPlayersStatsAll(): Call<PlayerLeague>
 }

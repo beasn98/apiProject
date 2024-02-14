@@ -23,6 +23,21 @@ class PlayerListActivity : AppCompatActivity() {
 
         val retrofit = RetrofitHelper.getInstance()
         val PlayerService = retrofit.create(PlayerService::class.java)
+
+//        val allStatsCall = PlayerService.getPlayersStatsAll()
+//        allStatsCall.enqueue(object:Callback<PlayerLeague> {
+//            override fun onResponse(call: Call<PlayerLeague>, response: Response<PlayerLeague>) {
+//                Log.d(TAG, "onResponse: ${response.body()}")
+//            }
+//
+//            override fun onFailure(call: Call<PlayerLeague>, t: Throwable) {
+//                Log.d(TAG, "onFailure: ${t.message}")
+//            }
+//        })
+
+        binding.searchViewPlayerSearchbar.setOnSearchClickListener()
+
+
         val playerCall = PlayerService.getPlayerStats("beasn")
         playerCall.enqueue(object: Callback<Player> {
             override fun onResponse(call: Call<Player>, response: Response<Player>) {
@@ -34,5 +49,8 @@ class PlayerListActivity : AppCompatActivity() {
             }
         })
 
+
+
     }
+
 }
