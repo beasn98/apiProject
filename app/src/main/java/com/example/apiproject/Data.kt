@@ -1,3 +1,7 @@
 package com.example.apiproject
 
-data class Data(val user: User)
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
+data class Data(val user: User) : Parcelable

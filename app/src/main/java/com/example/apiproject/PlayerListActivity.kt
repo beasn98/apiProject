@@ -15,6 +15,7 @@ class PlayerListActivity : AppCompatActivity() {
     }
 
     private lateinit var binding: ActivityPlayerListBinding
+    private lateinit var playerList: List<UsersLeague>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,32 +23,39 @@ class PlayerListActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val retrofit = RetrofitHelper.getInstance()
-        val PlayerService = retrofit.create(PlayerService::class.java)
+        val playerService = retrofit.create(PlayerService::class.java)
 
-//        val allStatsCall = PlayerService.getPlayersStatsAll()
-//        allStatsCall.enqueue(object:Callback<PlayerLeague> {
-//            override fun onResponse(call: Call<PlayerLeague>, response: Response<PlayerLeague>) {
-//                Log.d(TAG, "onResponse: ${response.body()}")
-//            }
-//
-//            override fun onFailure(call: Call<PlayerLeague>, t: Throwable) {
-//                Log.d(TAG, "onFailure: ${t.message}")
-//            }
-//        })
-
-        binding.searchViewPlayerSearchbar.setOnSearchClickListener()
-
-
-        val playerCall = PlayerService.getPlayerStats("beasn")
-        playerCall.enqueue(object: Callback<Player> {
-            override fun onResponse(call: Call<Player>, response: Response<Player>) {
-                Log.d(TAG, "onResponse: ${response.body()}")
+        val allStatsCall = playerService.getPlayersStatsAll()
+        allStatsCall.enqueue(object:Callback<PlayerLeague> {
+            override fun onResponse(call: Call<PlayerLeague>, response: Response<PlayerLeague>) {
+                //make the default list here
+                if (response.body()!=null) {
+                    playerList = response.body()!!.data.users
+                    playerAdapter = PlayerAdapter(playerList)
+                }
             }
 
-            override fun onFailure(call: Call<Player>, t: Throwable) {
+            override fun onFailure(call: Call<PlayerLeague>, t: Throwable) {
                 Log.d(TAG, "onFailure: ${t.message}")
             }
         })
+
+
+
+
+
+
+
+//        val playerCall = PlayerService.getPlayerStats("beasn")
+//        playerCall.enqueue(object: Callback<Player> {
+//            override fun onResponse(call: Call<Player>, response: Response<Player>) {
+//                Log.d(TAG, "onResponse: ${response.body()}")
+//            }
+//
+//            override fun onFailure(call: Call<Player>, t: Throwable) {
+//                Log.d(TAG, "onFailure: ${t.message}")
+//            }
+//        })
 
 
 

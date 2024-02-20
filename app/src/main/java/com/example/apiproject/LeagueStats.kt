@@ -1,5 +1,9 @@
 package com.example.apiproject
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class LeagueStats(val gamesplayed:Int,
     val gameswon: Int,
     val rating: Double,
@@ -10,5 +14,5 @@ data class LeagueStats(val gamesplayed:Int,
     val apm: Double,
     val pps: Double,
     val vs: Double,
-    val standing: Int,
-    )
+    val standing: Int
+    ) : Parcelable

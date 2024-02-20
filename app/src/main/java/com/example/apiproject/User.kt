@@ -1,5 +1,9 @@
 package com.example.apiproject
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class User(
     val username: String,
     val badges: List<Badge>,
@@ -11,4 +15,4 @@ data class User(
     val supporter_tier: Int,
     val verified: Boolean,
     val league: LeagueStats
-)
+) : Parcelable
