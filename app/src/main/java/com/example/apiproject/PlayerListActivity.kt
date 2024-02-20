@@ -3,6 +3,7 @@ package com.example.apiproject
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.apiproject.databinding.ActivityPlayerListBinding
 import retrofit2.Call
 import retrofit2.Callback
@@ -16,6 +17,7 @@ class PlayerListActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityPlayerListBinding
     private lateinit var playerList: List<UsersLeague>
+    private lateinit var playerAdapter: PlayerAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +34,9 @@ class PlayerListActivity : AppCompatActivity() {
                 if (response.body()!=null) {
                     playerList = response.body()!!.data.users
                     playerAdapter = PlayerAdapter(playerList)
+                    //playerAdapter.notifyDataSetChanged()
+                    binding.recyclerViewPlayerList.adapter = playerAdapter
+                    binding.recyclerViewPlayerList.layoutManager = LinearLayoutManager(this@PlayerListActivity)
                 }
             }
 
