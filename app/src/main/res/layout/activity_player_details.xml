@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView_playerDetail_pfp"
+        android:layout_width="225dp"
+        android:layout_height="225dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textView_playerDetails_username"
+        android:layout_width="259dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_playerDetail_pfp"
+        tools:text="Best Player Ever" />
+
+    <TextView
+        android:id="@+id/textView_playerDetails_rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_playerDetails_username"
+        tools:text="Rank (X)" />
+
+    <TextView
+        android:id="@+id/textView_playerdetails_gamesWon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_playerDetails_gamesPlayed"
+        tools:text="100 (won)" />
+
+    <TextView
+        android:id="@+id/textView_playerDetails_gamesPlayed"
+        android:layout_width="131dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_playerDetails_xp"
+        tools:text="342 (games played)" />
+
+    <TextView
+        android:id="@+id/textView_playerDetails_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_playerDetails_bestRank"
+        tools:text="24449.95" />
+
+    <TextView
+        android:id="@+id/textView_playerDetails_xp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_playerDetails_glicko"
+        tools:text="129830182 XP" />
+
+    <TextView
+        android:id="@+id/textView_playerDetails_glicko"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_playerDetails_rating"
+        tools:text="Glicko: 2060.21 +- 350.21" />
+
+    <TextView
+        android:id="@+id/textView_playerDetails_bestRank"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_playerDetails_rank"
+        tools:text="Best: X" />
+
+    <TextView
+        android:id="@+id/textView_playerDetails_pps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/textView_heroDetails_vs"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView_playerDetails_apm"
+        app:layout_constraintTop_toBottomOf="@+id/textView_playerDetails_winRate"
+        tools:text="pps: 1.44" />
+
+    <TextView
+        android:id="@+id/textView_playerDetails_apm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/textView_playerDetails_pps"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView_playerDetails_pps"
+        tools:text="apm: 40.22" />
+
+    <TextView
+        android:id="@+id/textView_heroDetails_vs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView_playerDetails_pps"
+        app:layout_constraintTop_toTopOf="@+id/textView_playerDetails_pps"
+        tools:text="VS: 78.83" />
+
+    <TextView
+        android:id="@+id/textView_playerDetails_winRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_playerdetails_gamesWon"
+        tools:text="Win rate: 100%" />
+</androidx.constraintlayout.widget.ConstraintLayout>

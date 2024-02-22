@@ -43,6 +43,7 @@ class PlayerAdapter(var playerList: List<UsersLeague>) :
 
     companion object {
         val EXTRA_PLAYER = "player"
+        val EXTRA_USERNAME = "username"
     }
 
     // Replace the contents of a view (invoked by the layout manager)
@@ -59,6 +60,7 @@ class PlayerAdapter(var playerList: List<UsersLeague>) :
         viewHolder.layout.setOnClickListener {
             val playerIntent = Intent(context, PlayerDetailsActivity::class.java)
             playerIntent.putExtra(EXTRA_PLAYER, player)
+            playerIntent.putExtra(EXTRA_USERNAME, player.username)
             context.startActivity(playerIntent)
         }
 
