@@ -23,12 +23,12 @@ class PlayerDetailsActivity : AppCompatActivity() {
         val rank = player?.league?.rank
         val bestRank = player?.league?.bestrank
         val apm = player?.league?.apm
-        val pps =player?.league?.pps
+        val pps = player?.league?.pps
         val vs = player?.league?.vs
-        //val standing = player?.league?.standing
+        val standing = player?.league?.standing
         val experience = player?.xp
 
-        val winrate = (gamesWon!!.toDouble()/gamesPlayed!!) * 100
+        val winRate = (gamesWon!!.toDouble()/gamesPlayed!!) * 100
 
         Picasso.get().load("https://tetr.io/user-content/avatars/${player?._id}.jpg").into(binding.imageViewPlayerDetailPfp)
 
@@ -43,7 +43,8 @@ class PlayerDetailsActivity : AppCompatActivity() {
         binding.textViewPlayerDetailsRating.text = String.format("%.2f",rating) + " TR"
         binding.textViewPlayerDetailsUsername.text = intent.getStringExtra(PlayerAdapter.EXTRA_USERNAME)
         binding.textViewPlayerDetailsXp.text = "XP: " + experience?.toInt().toString()
-        binding.textViewPlayerDetailsWinRate.text = "Win rate: ${String.format("%.2f",winrate)}%"
+        binding.textViewPlayerDetailsWinRate.text = "Win rate: ${String.format("%.2f",winRate)}%"
+        binding.textViewPlayerDetailStanding.text = "#$standing"
 
 
 

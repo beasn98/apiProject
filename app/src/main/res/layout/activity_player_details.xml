@@ -18,7 +18,7 @@
 
     <TextView
         android:id="@+id/textView_playerDetails_username"
-        android:layout_width="259dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:gravity="center"
@@ -31,7 +31,7 @@
 
     <TextView
         android:id="@+id/textView_playerDetails_rank"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textSize="60sp"
@@ -44,9 +44,10 @@
 
     <TextView
         android:id="@+id/textView_playerdetails_gamesWon"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,10 +56,11 @@
 
     <TextView
         android:id="@+id/textView_playerDetails_gamesPlayed"
-        android:layout_width="131dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:gravity="center"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,10 +69,11 @@
 
     <TextView
         android:id="@+id/textView_playerDetails_rating"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="28dp"
         android:gravity="center"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,10 +82,11 @@
 
     <TextView
         android:id="@+id/textView_playerDetails_xp"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="28dp"
         android:gravity="center"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -91,9 +95,10 @@
 
     <TextView
         android:id="@+id/textView_playerDetails_glicko"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -102,8 +107,8 @@
 
     <TextView
         android:id="@+id/textView_playerDetails_bestRank"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -114,10 +119,11 @@
 
     <TextView
         android:id="@+id/textView_playerDetails_pps"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="28dp"
         android:gravity="center"
+        android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/textView_heroDetails_vs"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView_playerDetails_apm"
@@ -126,9 +132,10 @@
 
     <TextView
         android:id="@+id/textView_playerDetails_apm"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/textView_playerDetails_pps"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -137,9 +144,10 @@
 
     <TextView
         android:id="@+id/textView_heroDetails_vs"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView_playerDetails_pps"
@@ -148,12 +156,24 @@
 
     <TextView
         android:id="@+id/textView_playerDetails_winRate"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_playerdetails_gamesWon"
         tools:text="Win rate: 100%" />
+
+    <TextView
+        android:id="@+id/textView_playerDetail_standing"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="#50" />
 </androidx.constraintlayout.widget.ConstraintLayout>
