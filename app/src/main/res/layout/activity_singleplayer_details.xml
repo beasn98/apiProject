@@ -6,81 +6,110 @@
     android:layout_height="match_parent"
     tools:context=".SinglePlayerDetailsActivity">
 
-    <TextView
-        android:id="@+id/textView_playerDetails_bestRank"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="34sp"
-        tools:layout_editor_absoluteY="384dp"
-        tools:text="Best: X" />
+    <ImageView
+        android:id="@+id/imageView_PlayerDetails_bestRank"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView_singlePlayerDetails_best"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_PlayerDetails_rank"
+        tools:srcCompat="@tools:sample/avatars" />
 
-    <TextView
-        android:id="@+id/textView_playerDetails_rank"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="60sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="251dp"
-        tools:text="Rank (X)" />
+    <ImageView
+        android:id="@+id/imageView_PlayerDetails_rank"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_singlePlayerDetails_username"
+        tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/textView_playerDetails_rating"
         android:layout_width="411dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:gravity="center"
         android:textSize="20sp"
-        tools:layout_editor_absoluteY="466dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_singlePlayerDetails_xp"
         tools:text="24449.95" />
 
     <ImageView
         android:id="@+id/imageView_singlePlayerDetails_pfp"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        tools:layout_editor_absoluteX="106dp"
-        tools:layout_editor_absoluteY="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/textView_singlePlayerDetails_username"
         android:layout_width="411dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:gravity="center"
         android:textSize="32sp"
-        tools:layout_editor_absoluteY="208dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_singlePlayerDetails_pfp"
         tools:text="LethalBacon0820" />
 
     <TextView
         android:id="@+id/textView_singlePlayerDetails_xp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="233dp"
-        tools:layout_editor_absoluteY="552dp"
+        android:layout_width="13dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_singlePlayerDetails_supporterTier"
         tools:text="XP" />
 
     <TextView
         android:id="@+id/textView_singlePlayerDetails_country"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="98dp"
-        tools:layout_editor_absoluteY="561dp"
-        tools:text="country" />
+        android:layout_marginTop="16dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_singlePlayerDetails_best"
+        tools:text="MERICA" />
 
     <TextView
         android:id="@+id/textView_singlePlayerDetails_supporterTier"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="321dp"
-        tools:layout_editor_absoluteY="552dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_singlePlayerDetails_country"
         tools:text="Supporter Tier" />
 
     <Button
         android:id="@+id/button_singlePlayerDetails_takeToStats"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:text="Button"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="625dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_playerDetails_rating" />
+
+    <TextView
+        android:id="@+id/textView_singlePlayerDetails_best"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Best:"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView_PlayerDetails_bestRank"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_PlayerDetails_rank" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -98,11 +98,11 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView_playerDetails_bestRank"
+        app:layout_constraintEnd_toStartOf="@+id/imageView_PlayerDetails_bestRank"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_playerDetails_rank"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_PlayerDetails_rank"
         tools:text="Best:" />
 
     <TextView
@@ -166,7 +166,7 @@
         tools:text="#50" />
 
     <ImageView
-        android:id="@+id/imageView_playerDetails_rank"
+        android:id="@+id/imageView_PlayerDetails_rank"
         android:layout_width="40dp"
         android:layout_height="40dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -176,13 +176,13 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
-        android:id="@+id/imageView_playerDetails_bestRank"
+        android:id="@+id/imageView_PlayerDetails_bestRank"
         android:layout_width="40dp"
         android:layout_height="40dp"
         app:layout_constraintBottom_toBottomOf="@+id/textView_playerDetails_bestRank"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView_playerDetails_bestRank"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_playerDetails_rank"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_PlayerDetails_rank"
         tools:srcCompat="@tools:sample/avatars" />
 </androidx.constraintlayout.widget.ConstraintLayout>
