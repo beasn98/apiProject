@@ -31,8 +31,11 @@ class PlayerDetailsActivity : AppCompatActivity() {
 
         Picasso.get().load("https://tetr.io/user-content/avatars/${player?._id}.jpg").into(binding.imageViewPlayerDetailsPfp)
 
-        binding.textViewPlayerDetailsRank.text = rank
-        binding.textViewPlayerDetailsBestRank.text = "Best: " + bestRank
+        Picasso.get().load("https://tetr.io/res/league-ranks/${rank}.png").into(binding.imageViewPlayerDetailsRank)
+
+        Picasso.get().load("https://tetr.io/res/league-ranks/${bestRank}.png").into(binding.imageViewPlayerDetailsBestRank)
+
+        binding.textViewPlayerDetailsBestRank.text = "Best:"
         binding.textViewPlayerDetailsVs.text = "VS: " + vs.toString()
         binding.textViewPlayerDetailsApm.text = "APM: " + apm.toString()
         binding.textViewPlayerDetailsGamesPlayed.text = "Games played: " + gamesPlayed.toString()

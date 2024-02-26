@@ -30,19 +30,6 @@
         tools:text="Best Player Ever" />
 
     <TextView
-        android:id="@+id/textView_playerDetails_rank"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="60sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_playerDetails_username"
-        tools:text="Rank (X)" />
-
-    <TextView
         android:id="@+id/textView_playerDetails_gamesWon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -107,15 +94,16 @@
 
     <TextView
         android:id="@+id/textView_playerDetails_bestRank"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView_playerDetails_bestRank"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_playerDetails_rank"
-        tools:text="Best: X" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView_playerDetails_rank"
+        tools:text="Best:" />
 
     <TextView
         android:id="@+id/textView_playerDetails_pps"
@@ -176,4 +164,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="#50" />
+
+    <ImageView
+        android:id="@+id/imageView_playerDetails_rank"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_playerDetails_username"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/imageView_playerDetails_bestRank"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_playerDetails_bestRank"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView_playerDetails_bestRank"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_playerDetails_rank"
+        tools:srcCompat="@tools:sample/avatars" />
 </androidx.constraintlayout.widget.ConstraintLayout>

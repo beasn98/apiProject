@@ -28,17 +28,6 @@
         tools:text="czsmall0402" />
 
     <TextView
-        android:id="@+id/textView_playerItem_rank"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="8dp"
-        android:textSize="28sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView_playerItem_pfp"
-        app:layout_constraintTop_toBottomOf="@+id/textView_playerItem_username"
-        tools:text="X" />
-
-    <TextView
         android:id="@+id/textView_playerItem_standing"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -49,4 +38,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="#1" />
+
+    <ImageView
+        android:id="@+id/imageView_playerItem_rank"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView_playerItem_pfp"
+        app:layout_constraintTop_toBottomOf="@+id/textView_playerItem_username"
+        tools:srcCompat="@tools:sample/avatars" />
 </androidx.constraintlayout.widget.ConstraintLayout>
