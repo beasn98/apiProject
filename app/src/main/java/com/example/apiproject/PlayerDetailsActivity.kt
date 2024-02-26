@@ -15,17 +15,17 @@ class PlayerDetailsActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val player = intent.getParcelableExtra<UsersLeague>(PlayerAdapter.EXTRA_PLAYER)
-        val gamesPlayed = player?.league?.gamesplayed
-        val gamesWon = player?.league?.gameswon
-        val rating = player?.league?.rating
-        val glicko = player?.league?.glicko
-        val rd = player?.league?.rd
-        val rank = player?.league?.rank
-        val bestRank = player?.league?.bestrank
-        val apm = player?.league?.apm
-        val pps = player?.league?.pps
-        val vs = player?.league?.vs
-        val experience = player?.xp
+        val gamesPlayed = player?.league?.gamesplayed ?:0
+        val gamesWon = player?.league?.gameswon ?:0
+        val rating = player?.league?.rating ?:0
+        val glicko = player?.league?.glicko ?:0
+        val rd = player?.league?.rd ?:0
+        val rank = player?.league?.rank ?:""
+        val bestRank = player?.league?.bestrank ?:""
+        val apm = player?.league?.apm ?:0
+        val pps = player?.league?.pps ?:0
+        val vs = player?.league?.vs ?:0
+        val experience = player?.xp ?:0
 
         val winRate = (gamesWon!!.toDouble()/gamesPlayed!!) * 100
 

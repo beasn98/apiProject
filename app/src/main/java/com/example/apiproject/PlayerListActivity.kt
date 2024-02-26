@@ -37,7 +37,6 @@ class PlayerListActivity : AppCompatActivity() {
                 if (response.body()!=null) {
                     playerList = response.body()!!.data.users
                     playerAdapter = PlayerAdapter(playerList)
-                    //playerAdapter.notifyDataSetChanged()
                     binding.recyclerViewPlayerList.adapter = playerAdapter
                     binding.recyclerViewPlayerList.layoutManager = LinearLayoutManager(this@PlayerListActivity)
                 }
@@ -47,7 +46,6 @@ class PlayerListActivity : AppCompatActivity() {
                 Log.d(TAG, "onFailure: ${t.message}")
             }
         })
-
 
         binding.searchViewPlayerSearchbar.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
@@ -65,15 +63,10 @@ class PlayerListActivity : AppCompatActivity() {
                 })
                 return false
             }
-
             override fun onQueryTextChange(newText: String?): Boolean {
                 return false
             }
         })
-
-
-
-
 
     }
 
