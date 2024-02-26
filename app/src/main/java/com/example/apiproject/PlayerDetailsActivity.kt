@@ -29,27 +29,19 @@ class PlayerDetailsActivity : AppCompatActivity() {
 
         val winRate = (gamesWon!!.toDouble()/gamesPlayed!!) * 100
 
-        Picasso.get().load("https://tetr.io/user-content/avatars/${player?._id}.jpg").into(binding.imageViewPlayerDetailPfp)
+        Picasso.get().load("https://tetr.io/user-content/avatars/${player?._id}.jpg").into(binding.imageViewPlayerDetailsPfp)
 
         binding.textViewPlayerDetailsRank.text = rank
         binding.textViewPlayerDetailsBestRank.text = "Best: " + bestRank
-        binding.textViewHeroDetailsVs.text = "VS: " + vs.toString()
+        binding.textViewPlayerDetailsVs.text = "VS: " + vs.toString()
         binding.textViewPlayerDetailsApm.text = "APM: " + apm.toString()
         binding.textViewPlayerDetailsGamesPlayed.text = "Games played: " + gamesPlayed.toString()
-        binding.textViewPlayerdetailsGamesWon.text = "Games won: " + gamesWon.toString()
+        binding.textViewPlayerDetailsGamesWon.text = "Games won: " + gamesWon.toString()
         binding.textViewPlayerDetailsGlicko.text = "Glicko: ${String.format("%.2f", glicko)} ± ${String.format(("%.2f"), rd)}"
         binding.textViewPlayerDetailsPps.text = "PPS: " + pps.toString()
         binding.textViewPlayerDetailsRating.text = String.format("%.2f",rating) + " TR"
         binding.textViewPlayerDetailsUsername.text = intent.getStringExtra(PlayerAdapter.EXTRA_USERNAME)
         binding.textViewPlayerDetailsXp.text = "XP: " + experience?.toInt().toString()
         binding.textViewPlayerDetailsWinRate.text = "Win rate: ${String.format("%.2f",winRate)}%"
-        binding.textViewPlayerDetailStanding.text = "#${intent.getIntExtra(PlayerAdapter.EXTRA_STANDING, -1)}"
-
-
-
-
-
-
-
     }
 }

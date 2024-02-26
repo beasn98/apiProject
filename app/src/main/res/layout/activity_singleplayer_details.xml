@@ -6,26 +6,81 @@
     android:layout_height="match_parent"
     tools:context=".SinglePlayerDetailsActivity">
 
+    <TextView
+        android:id="@+id/textView_playerDetails_bestRank"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="34sp"
+        tools:layout_editor_absoluteY="384dp"
+        tools:text="Best: X" />
+
+    <TextView
+        android:id="@+id/textView_playerDetails_rank"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="251dp"
+        tools:text="Rank (X)" />
+
+    <TextView
+        android:id="@+id/textView_playerDetails_rating"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteY="466dp"
+        tools:text="24449.95" />
+
     <ImageView
         android:id="@+id/imageView_singlePlayerDetails_pfp"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="106dp"
+        tools:layout_editor_absoluteY="8dp"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/textView_singlePlayerDetails_username"
-        android:layout_width="0dp"
+        android:layout_width="411dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textSize="32sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_singlePlayerDetails_pfp"
+        tools:layout_editor_absoluteY="208dp"
         tools:text="LethalBacon0820" />
+
+    <TextView
+        android:id="@+id/textView_singlePlayerDetails_xp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="233dp"
+        tools:layout_editor_absoluteY="552dp"
+        tools:text="XP" />
+
+    <TextView
+        android:id="@+id/textView_singlePlayerDetails_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="98dp"
+        tools:layout_editor_absoluteY="561dp"
+        tools:text="country" />
+
+    <TextView
+        android:id="@+id/textView_singlePlayerDetails_supporterTier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="321dp"
+        tools:layout_editor_absoluteY="552dp"
+        tools:text="Supporter Tier" />
+
+    <Button
+        android:id="@+id/button_singlePlayerDetails_takeToStats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="625dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

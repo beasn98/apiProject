@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView_playerDetail_pfp"
+        android:id="@+id/imageView_playerDetails_pfp"
         android:layout_width="225dp"
         android:layout_height="225dp"
         android:layout_marginTop="16dp"
@@ -26,7 +26,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_playerDetail_pfp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_playerDetails_pfp"
         tools:text="Best Player Ever" />
 
     <TextView
@@ -43,7 +43,7 @@
         tools:text="Rank (X)" />
 
     <TextView
-        android:id="@+id/textView_playerdetails_gamesWon"
+        android:id="@+id/textView_playerDetails_gamesWon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -124,7 +124,7 @@
         android:layout_marginTop="28dp"
         android:gravity="center"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/textView_heroDetails_vs"
+        app:layout_constraintEnd_toStartOf="@+id/textView_playerDetails_vs"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView_playerDetails_apm"
         app:layout_constraintTop_toBottomOf="@+id/textView_playerDetails_winRate"
@@ -143,7 +143,7 @@
         tools:text="apm: 40.22" />
 
     <TextView
-        android:id="@+id/textView_heroDetails_vs"
+        android:id="@+id/textView_playerDetails_vs"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -163,11 +163,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_playerdetails_gamesWon"
+        app:layout_constraintTop_toBottomOf="@+id/textView_playerDetails_gamesWon"
         tools:text="Win rate: 100%" />
 
     <TextView
-        android:id="@+id/textView_playerDetail_standing"
+        android:id="@+id/textView_playerDetails_standing"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

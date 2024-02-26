@@ -14,10 +14,6 @@ import com.squareup.picasso.Picasso
 class PlayerAdapter(var playerList: List<UsersLeague>) :
     RecyclerView.Adapter<PlayerAdapter.ViewHolder>() {
 
-    /**
-     * Provide a reference to the type of views that you are using
-     * (custom ViewHolder)
-     */
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val textViewName: TextView
         val layout : ConstraintLayout

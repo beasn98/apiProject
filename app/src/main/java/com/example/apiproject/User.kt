@@ -5,7 +5,7 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class User(
-    val _id:String,
+    val _id: String,
     val username: String,
     val badges: List<Badge>,
     val xp: Double,
