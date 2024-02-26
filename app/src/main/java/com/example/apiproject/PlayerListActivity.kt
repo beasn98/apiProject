@@ -54,7 +54,7 @@ class PlayerListActivity : AppCompatActivity() {
                 val playerCall = playerService.getPlayerStats(query ?: "")
                 playerCall.enqueue(object: Callback<Player> {
                     override fun onResponse(call: Call<Player>, response: Response<Player>) {
-                        val playerIntent = Intent(this@PlayerListActivity, PlayerDetailsActivity::class.java)
+                        val playerIntent = Intent(this@PlayerListActivity, SinglePlayerDetailsActivity::class.java)
                         playerIntent.putExtra(EXTRA_PLAYER, response.body())
                         this@PlayerListActivity.startActivity(playerIntent)
                     }

@@ -25,7 +25,6 @@ class PlayerDetailsActivity : AppCompatActivity() {
         val apm = player?.league?.apm
         val pps = player?.league?.pps
         val vs = player?.league?.vs
-        val standing = player?.league?.standing
         val experience = player?.xp
 
         val winRate = (gamesWon!!.toDouble()/gamesPlayed!!) * 100
@@ -44,7 +43,7 @@ class PlayerDetailsActivity : AppCompatActivity() {
         binding.textViewPlayerDetailsUsername.text = intent.getStringExtra(PlayerAdapter.EXTRA_USERNAME)
         binding.textViewPlayerDetailsXp.text = "XP: " + experience?.toInt().toString()
         binding.textViewPlayerDetailsWinRate.text = "Win rate: ${String.format("%.2f",winRate)}%"
-        binding.textViewPlayerDetailStanding.text = "#$standing"
+        binding.textViewPlayerDetailStanding.text = "#${intent.getIntExtra(PlayerAdapter.EXTRA_STANDING, -1)}"
 
 
 

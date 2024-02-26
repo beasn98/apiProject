@@ -1,6 +1,7 @@
 package com.example.apiproject
 
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -42,8 +43,10 @@ class PlayerAdapter(var playerList: List<UsersLeague>) :
         return ViewHolder(view)
     }
     companion object {
+        val TAG = "playerAdapter"
         val EXTRA_PLAYER = "player"
         val EXTRA_USERNAME = "username"
+        val EXTRA_STANDING = "standing"
     }
 
     // Replace the contents of a view (invoked by the layout manager)
@@ -53,14 +56,15 @@ class PlayerAdapter(var playerList: List<UsersLeague>) :
         val context = viewHolder.layout.context
         val player = playerList[position]
         viewHolder.textViewName.text = player.username
-        viewHolder.textViewStanding.text = player.league.standing.toString()
+        viewHolder.textViewStanding.text = "#${position+1}"
         viewHolder.textViewRanking.text = player.league.rank
         Picasso.get().load("https://tetr.io/user-content/avatars/${player._id}.jpg").into(viewHolder.profilePicture)
 
         viewHolder.layout.setOnClickListener {
-            val playerIntent = Intent(context, SinglePlayerDetailsActivity::class.java)
+            val playerIntent = Intent(context, PlayerDetailsActivity::class.java)
             playerIntent.putExtra(EXTRA_PLAYER, player)
             playerIntent.putExtra(EXTRA_USERNAME, player.username)
+            playerIntent.putExtra(EXTRA_STANDING, position+1)
             context.startActivity(playerIntent)
         }
     }

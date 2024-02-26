@@ -14,5 +14,4 @@ data class LeagueStats(val gamesplayed:Int,
     val apm: Double,
     val pps: Double,
     val vs: Double,
-    val standing: Int
     ) : Parcelable
