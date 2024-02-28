@@ -2,12 +2,17 @@ package com.example.apiproject
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.example.apiproject.databinding.ActivityPlayerDetailsBinding
 import com.squareup.picasso.Picasso
 
 class PlayerDetailsActivity : AppCompatActivity() {
 
     private lateinit var binding:ActivityPlayerDetailsBinding
+
+    companion object {
+        val TAG = "playerDetailsActivity"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +31,7 @@ class PlayerDetailsActivity : AppCompatActivity() {
         val pps = player?.league?.pps ?:0
         val vs = player?.league?.vs ?:0
         val experience = player?.xp ?:0
+        val country = player?.country ?: "xm"
 
         val winRate = (gamesWon!!.toDouble()/gamesPlayed!!) * 100
 
@@ -35,7 +41,10 @@ class PlayerDetailsActivity : AppCompatActivity() {
 
         Picasso.get().load("https://tetr.io/res/league-ranks/${bestRank}.png").into(binding.imageViewPlayerDetailsBestRank)
 
+        Picasso.get().load("https://tetr.io/res/flags/${country.lowercase()}.png").into(binding.imageViewPlayerDetailsCountry)
+
         binding.textViewPlayerDetailsBestRank.text = "Best:"
+        binding.textViewPlayerDetailsStanding.text = "#" + intent.getIntExtra(PlayerAdapter.EXTRA_STANDING, -1)
         binding.textViewPlayerDetailsVs.text = "VS: " + vs.toString()
         binding.textViewPlayerDetailsApm.text = "APM: " + apm.toString()
         binding.textViewPlayerDetailsGamesPlayed.text = "Games played: " + gamesPlayed.toString()

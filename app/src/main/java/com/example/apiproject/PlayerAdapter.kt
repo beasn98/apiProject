@@ -20,6 +20,7 @@ class PlayerAdapter(var playerList: List<UsersLeague>) :
         val profilePicture : ImageView
         val textViewStanding : TextView
         val imageViewRank: ImageView
+        val imageViewCountry: ImageView
         init {
             // Define click listener for the ViewHolder's View
             textViewName = view.findViewById(R.id.textView_playerItem_username)
@@ -27,6 +28,7 @@ class PlayerAdapter(var playerList: List<UsersLeague>) :
             profilePicture = view.findViewById(R.id.imageView_playerItem_pfp)
             textViewStanding = view.findViewById(R.id.textView_playerItem_standing)
             imageViewRank = view.findViewById(R.id.imageView_playerItem_rank)
+            imageViewCountry = view.findViewById(R.id.imageView_playerItem_country)
         }
     }
 
@@ -57,6 +59,8 @@ class PlayerAdapter(var playerList: List<UsersLeague>) :
         Picasso.get().load("https://tetr.io/res/league-ranks/${player.league.rank}.png").into(viewHolder.imageViewRank)
 
         Picasso.get().load("https://tetr.io/user-content/avatars/${player._id}.jpg").into(viewHolder.profilePicture)
+
+        Picasso.get().load("https://tetr.io/res/flags/${player.country?.lowercase()}.png").into(viewHolder.imageViewCountry)
 
         viewHolder.layout.setOnClickListener {
             val playerIntent = Intent(context, PlayerDetailsActivity::class.java)

@@ -48,4 +48,14 @@
         app:layout_constraintStart_toEndOf="@+id/imageView_playerItem_pfp"
         app:layout_constraintTop_toBottomOf="@+id/textView_playerItem_username"
         tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/imageView_playerItem_country"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView_playerItem_rank"
+        app:layout_constraintTop_toBottomOf="@+id/textView_playerItem_username"
+        tools:srcCompat="@tools:sample/avatars" />
 </androidx.constraintlayout.widget.ConstraintLayout>

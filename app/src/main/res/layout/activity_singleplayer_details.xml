@@ -27,7 +27,7 @@
 
     <TextView
         android:id="@+id/textView_playerDetails_rating"
-        android:layout_width="411dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:gravity="center"
@@ -49,7 +49,7 @@
 
     <TextView
         android:id="@+id/textView_singlePlayerDetails_username"
-        android:layout_width="411dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:gravity="center"
@@ -61,35 +61,16 @@
 
     <TextView
         android:id="@+id/textView_singlePlayerDetails_xp"
-        android:layout_width="13dp"
-        android:layout_height="20dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_singlePlayerDetails_supporterTier"
-        tools:text="XP" />
-
-    <TextView
-        android:id="@+id/textView_singlePlayerDetails_country"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_singlePlayerDetails_best"
-        tools:text="MERICA" />
-
-    <TextView
-        android:id="@+id/textView_singlePlayerDetails_supporterTier"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_singlePlayerDetails_country"
-        tools:text="Supporter Tier" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView_singlePlayerStatsDetails_country"
+        tools:text="327685583" />
 
     <Button
         android:id="@+id/button_singlePlayerDetails_takeToStats"
@@ -112,4 +93,15 @@
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView_PlayerDetails_rank" />
+
+    <ImageView
+        android:id="@+id/imageView_singlePlayerStatsDetails_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_singlePlayerDetails_best"
+        tools:srcCompat="@tools:sample/avatars" />
 </androidx.constraintlayout.widget.ConstraintLayout>
