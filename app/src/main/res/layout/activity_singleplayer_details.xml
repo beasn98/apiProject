@@ -6,25 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".SinglePlayerDetailsActivity">
 
-    <ImageView
-        android:id="@+id/imageView_PlayerDetails_bestRank"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView_singlePlayerDetails_best"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_PlayerDetails_rank"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <ImageView
-        android:id="@+id/imageView_PlayerDetails_rank"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_singlePlayerDetails_username"
-        tools:srcCompat="@tools:sample/avatars" />
-
     <TextView
         android:id="@+id/textView_playerDetails_rating"
         android:layout_width="0dp"
@@ -88,11 +69,11 @@
         android:layout_height="wrap_content"
         android:text="Best:"
         android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView_PlayerDetails_bestRank"
+        app:layout_constraintEnd_toStartOf="@+id/imageView_singlePlayerDetails_bestRank"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_PlayerDetails_rank" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView_singlePlayerDetails_rank" />
 
     <ImageView
         android:id="@+id/imageView_singlePlayerStatsDetails_country"
@@ -103,5 +84,27 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_singlePlayerDetails_best"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/imageView_singlePlayerDetails_rank"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_singlePlayerDetails_username"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/imageView_singlePlayerDetails_bestRank"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_singlePlayerDetails_best"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView_singlePlayerDetails_best"
+        app:layout_constraintTop_toTopOf="@+id/textView_singlePlayerDetails_best"
         tools:srcCompat="@tools:sample/avatars" />
 </androidx.constraintlayout.widget.ConstraintLayout>
