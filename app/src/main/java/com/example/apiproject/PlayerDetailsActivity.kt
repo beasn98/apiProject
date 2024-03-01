@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import com.example.apiproject.databinding.ActivityPlayerDetailsBinding
 import com.squareup.picasso.Picasso
+import java.math.BigDecimal
 
 class PlayerDetailsActivity : AppCompatActivity() {
 
@@ -25,13 +26,13 @@ class PlayerDetailsActivity : AppCompatActivity() {
         val rating = player?.league?.rating ?:0
         val glicko = player?.league?.glicko ?:0
         val rd = player?.league?.rd ?:0
-        val rank = player?.league?.rank ?:""
-        val bestRank = player?.league?.bestrank ?:""
+        val rank = player?.league?.rank ?: "z"
+        val bestRank = player?.league?.bestrank
         val apm = player?.league?.apm ?:0
         val pps = player?.league?.pps ?:0
         val vs = player?.league?.vs ?:0
-        val experience = player?.xp ?:0
-        val country = player?.country ?: "xm"
+        val experience = player?.xp
+        val country = player?.country ?:""
 
         val winRate = (gamesWon!!.toDouble()/gamesPlayed!!) * 100
 
@@ -53,7 +54,7 @@ class PlayerDetailsActivity : AppCompatActivity() {
         binding.textViewPlayerDetailsPps.text = "PPS: " + pps.toString()
         binding.textViewPlayerDetailsRating.text = String.format("%.2f",rating) + " TR"
         binding.textViewPlayerDetailsUsername.text = intent.getStringExtra(PlayerAdapter.EXTRA_USERNAME)
-        binding.textViewPlayerDetailsXp.text = "XP: " + experience?.toInt().toString()
+        binding.textViewPlayerDetailsXp.text = "XP: ${BigDecimal.valueOf(experience!!).toPlainString()}"
         binding.textViewPlayerDetailsWinRate.text = "Win rate: ${String.format("%.2f",winRate)}%"
     }
 }

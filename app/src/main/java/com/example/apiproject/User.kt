@@ -12,7 +12,7 @@ data class User(
     val gamesplayed: Int,
     val gameswon: Int,
     val gametime: Double,
-    val country: String,
+    val country: String?,
     val supporter_tier: Int,
     val verified: Boolean,
     val league: LeagueStats
