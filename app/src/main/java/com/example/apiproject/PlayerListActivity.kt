@@ -15,7 +15,6 @@ import retrofit2.Response
 class PlayerListActivity : AppCompatActivity() {
     
     companion object {
-        val TAG = "PlayerListActivity"
         val EXTRA_PLAYER = "player"
     }
 
@@ -44,7 +43,7 @@ class PlayerListActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<PlayerLeague>, t: Throwable) {
-                Log.d(TAG, "onFailure: ${t.message}")
+                Toast.makeText(this@PlayerListActivity, "Oopsies", Toast.LENGTH_SHORT).show()
             }
         })
 
@@ -71,7 +70,7 @@ class PlayerListActivity : AppCompatActivity() {
                     }
 
                     override fun onFailure(call: Call<Player>, t: Throwable) {
-                        Log.d(TAG, "onFailure: ${t.message}")
+                        Toast.makeText(this@PlayerListActivity, "Oopsies", Toast.LENGTH_SHORT).show()
                     }
                 })
                 return false
