@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.SearchView
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.apiproject.databinding.ActivityPlayerListBinding
 import retrofit2.Call
@@ -52,9 +53,21 @@ class PlayerListActivity : AppCompatActivity() {
                 val playerCall = playerService.getPlayerStats(query ?: "")
                 playerCall.enqueue(object: Callback<Player> {
                     override fun onResponse(call: Call<Player>, response: Response<Player>) {
-                        val playerIntent = Intent(this@PlayerListActivity, SinglePlayerDetailsActivity::class.java)
-                        playerIntent.putExtra(EXTRA_PLAYER, response.body())
-                        this@PlayerListActivity.startActivity(playerIntent)
+                        if (response.body()!!.data != null) {
+                            val playerIntent = Intent(
+                                this@PlayerListActivity,
+                                SinglePlayerDetailsActivity::class.java
+                            )
+                            playerIntent.putExtra(EXTRA_PLAYER, response.body())
+                            this@PlayerListActivity.startActivity(playerIntent)
+                        }
+                        else {
+                            Toast.makeText(
+                                this@PlayerListActivity,
+                                "No such user exists :(",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
                     }
 
                     override fun onFailure(call: Call<Player>, t: Throwable) {
