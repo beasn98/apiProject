@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
     <ImageView
         android:id="@+id/imageView_playerDetails_pfp"
         android:layout_width="225dp"
@@ -27,7 +26,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView_playerDetails_pfp"
-        tools:text="Best Player Ever" />
+        tools:text="Best Player Ever"/>
 
     <TextView
         android:id="@+id/textView_playerDetails_gamesWon"
