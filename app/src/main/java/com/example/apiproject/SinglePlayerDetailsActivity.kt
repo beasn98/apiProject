@@ -3,6 +3,7 @@ package com.example.apiproject
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.WindowManager
 import androidx.appcompat.app.AlertDialog
 import com.example.apiproject.databinding.ActivitySingleplayerDetailsBinding
 import com.squareup.picasso.Picasso
@@ -52,31 +53,50 @@ class SinglePlayerDetailsActivity : AppCompatActivity() {
         if (rating == "Never played Tetra League") {
             binding.buttonSinglePlayerDetailsTakeToStats.isEnabled = false
         }
+        else {
+            binding.buttonSinglePlayerDetailsTakeToStats.setOnClickListener {
+                val builder = AlertDialog.Builder(this)
+                builder.setTitle("Tetra League stats:")
+                builder.setMessage(
+                    "Glicko: ${String.format("%.2f", glicko)} ± ${String.format(("%.2f"), rd)} \n" +
+                            "\n" +
+                            "Games played: $gamesPlayed \n" +
+                            "Games won: $gamesWon \n" +
+                            "Win rate: ${
+                                String.format(
+                                    "%.2f",
+                                    (gamesWon!!.toDouble() / gamesPlayed!!) * 100
+                                )
+                            }% \n" +
+                            "\n" +
+                            "APM: $apm \n" +
+                            "PPS: $pps \n" +
+                            "VS: $vs"
+                )
 
-        binding.buttonSinglePlayerDetailsTakeToStats.setOnClickListener {
-            val builder = AlertDialog.Builder(this)
-            builder.setTitle("Tetra League stats:")
-            builder.setMessage("Glicko: ${String.format("%.2f", glicko)} ± ${String.format(("%.2f"), rd)} \n" +
-                    "\n" +
-                    "Games played: $gamesPlayed \n" +
-                    "Games won: $gamesWon \n" +
-                    "Win rate: ${String.format("%.2f", (gamesWon!!.toDouble()/gamesPlayed!!) * 100)}% \n" +
-                    "\n" +
-                    "APM: $apm \n" +
-                    "PPS: $pps \n" +
-                    "VS: $vs")
-
-            builder.setPositiveButton("That's wild", null)
-            builder.show()
+                builder.setPositiveButton("That's wild", null)
+                builder.show()
+            }
         }
 
         if (player?.badges?.size == 0) {
             binding.buttonSinglePlayerDetailsBadges.isEnabled = false
             binding.buttonSinglePlayerDetailsBadges.text = "No badges"
         }
-
-        binding.buttonSinglePlayerDetailsBadges.setOnClickListener {
-            val builder = AlertDialog.Builder(this)
+        else {
+            binding.buttonSinglePlayerDetailsBadges.text = "Badges"
+            binding.buttonSinglePlayerDetailsBadges.setOnClickListener {
+                var message = ""
+                for (i in 0..<player?.badges?.size!!) {
+                    message += "${i+1}) ${player?.badges?.get(i)?.label}"
+                    message += "\n"
+                }
+                val builder = AlertDialog.Builder(this)
+                builder.setTitle("Badges:")
+                builder.setMessage(message)
+                builder.setPositiveButton("Woah!", null)
+                builder.show()
+            }
         }
     }
 }
