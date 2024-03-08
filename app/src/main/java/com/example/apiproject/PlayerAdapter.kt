@@ -58,7 +58,7 @@ class PlayerAdapter(var playerList: List<UsersLeague>) :
 
         Picasso.get().load("https://tetr.io/res/league-ranks/${player.league.rank}.png").into(viewHolder.imageViewRank)
 
-        Picasso.get().load("https://tetr.io/user-content/avatars/${player._id}.jpg").into(viewHolder.profilePicture)
+        Picasso.get().load("https://tetr.io/user-content/avatars/${player._id}.jpg").placeholder(R.drawable.cat).into(viewHolder.profilePicture)
 
         Picasso.get().load("https://tetr.io/res/flags/${player.country?.lowercase()}.png").into(viewHolder.imageViewCountry)
 

@@ -49,7 +49,8 @@
         android:text="Button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_singlePlayerDetails_rating" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_singlePlayerDetails_rating"
+        tools:text="Tetra League Stats" />
 
     <TextView
         android:id="@+id/textView_singlePlayerDetails_best"
@@ -65,8 +66,8 @@
 
     <ImageView
         android:id="@+id/imageView_singlePlayerStatsDetails_country"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
         android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -107,4 +108,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_singlePlayerDetails_xp"
         tools:text="24999.5 TR" />
+
+    <Button
+        android:id="@+id/button_singlePlayerDetails_badges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_singlePlayerDetails_takeToStats"
+        tools:text="Badges" />
 </androidx.constraintlayout.widget.ConstraintLayout>

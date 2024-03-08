@@ -36,7 +36,7 @@ class PlayerDetailsActivity : AppCompatActivity() {
 
         val winRate = (gamesWon!!.toDouble()/gamesPlayed!!) * 100
 
-        Picasso.get().load("https://tetr.io/user-content/avatars/${player?._id}.jpg").into(binding.imageViewPlayerDetailsPfp)
+        Picasso.get().load("https://tetr.io/user-content/avatars/${player?._id}.jpg").placeholder(R.drawable.cat).into(binding.imageViewPlayerDetailsPfp)
 
         Picasso.get().load("https://tetr.io/res/league-ranks/${rank}.png").into(binding.imageViewPlayerDetailsRank)
 

@@ -34,7 +34,7 @@ class SinglePlayerDetailsActivity : AppCompatActivity() {
 
         val bestRank = player?.league?.bestrank ?: "z"
 
-        Picasso.get().load("https://tetr.io/user-content/avatars/${player?._id}.jpg").into(binding.imageViewSinglePlayerDetailsPfp)
+        Picasso.get().load("https://tetr.io/user-content/avatars/${player?._id}.jpg").placeholder(R.drawable.cat).into(binding.imageViewSinglePlayerDetailsPfp)
 
         Picasso.get().load("https://tetr.io/res/league-ranks/${player?.league?.rank}.png").into(binding.imageViewSinglePlayerDetailsRank)
         Picasso.get().load("https://tetr.io/res/league-ranks/${bestRank}.png").into(binding.imageViewSinglePlayerDetailsBestRank)
@@ -68,6 +68,15 @@ class SinglePlayerDetailsActivity : AppCompatActivity() {
 
             builder.setPositiveButton("That's wild", null)
             builder.show()
+        }
+
+        if (player?.badges?.size == 0) {
+            binding.buttonSinglePlayerDetailsBadges.isEnabled = false
+            binding.buttonSinglePlayerDetailsBadges.text = "No badges"
+        }
+
+        binding.buttonSinglePlayerDetailsBadges.setOnClickListener {
+            val builder = AlertDialog.Builder(this)
         }
     }
 }

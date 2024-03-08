@@ -13,7 +13,7 @@ data class User(
     val gameswon: Int,
     val gametime: Double,
     val country: String?,
-    val supporter_tier: Int,
+    //val supporter_tier: Int,
     val verified: Boolean,
     val league: LeagueStats
 ) : Parcelable
