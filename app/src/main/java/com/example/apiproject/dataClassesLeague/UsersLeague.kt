@@ -1,6 +1,7 @@
-package com.example.apiproject
+package com.example.apiproject.dataClassesLeague
 
 import android.os.Parcelable
+import com.example.apiproject.LeagueStats
 import kotlinx.parcelize.Parcelize
 
 @Parcelize

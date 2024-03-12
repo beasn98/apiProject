@@ -3,10 +3,12 @@ package com.example.apiproject
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.SearchView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.apiproject.dataClassesLeague.PlayerLeague
+import com.example.apiproject.dataClassesLeague.UsersLeague
+import com.example.apiproject.dataClassesUser.Player
 import com.example.apiproject.databinding.ActivityPlayerListBinding
 import retrofit2.Call
 import retrofit2.Callback

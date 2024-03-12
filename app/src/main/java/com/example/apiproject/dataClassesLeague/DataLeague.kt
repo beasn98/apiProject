@@ -1,4 +1,4 @@
-package com.example.apiproject
+package com.example.apiproject.dataClassesLeague
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

@@ -2,7 +2,7 @@ package com.example.apiproject
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import com.example.apiproject.dataClassesLeague.UsersLeague
 import com.example.apiproject.databinding.ActivityPlayerDetailsBinding
 import com.squareup.picasso.Picasso
 import java.math.BigDecimal

@@ -3,6 +3,7 @@ package com.example.apiproject
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
+import com.example.apiproject.dataClassesUser.Player
 import com.example.apiproject.databinding.ActivitySingleplayerDetailsBinding
 import com.squareup.picasso.Picasso
 import java.math.BigDecimal
