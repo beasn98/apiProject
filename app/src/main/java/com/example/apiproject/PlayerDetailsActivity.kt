@@ -34,7 +34,7 @@ class PlayerDetailsActivity : AppCompatActivity() {
         val experience = player?.xp
         val country = player?.country ?:""
 
-        val winRate = (gamesWon!!.toDouble()/gamesPlayed!!) * 100
+        val winRate = (gamesWon.toDouble()/gamesPlayed!!) * 100
 
         Picasso.get().load("https://tetr.io/user-content/avatars/${player?._id}.jpg").placeholder(R.drawable.cat).into(binding.imageViewPlayerDetailsPfp)
 

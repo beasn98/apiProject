@@ -44,6 +44,7 @@ class PlayerListActivity : AppCompatActivity() {
 
             override fun onFailure(call: Call<PlayerLeague>, t: Throwable) {
                 Toast.makeText(this@PlayerListActivity, "Oopsies", Toast.LENGTH_SHORT).show()
+                t.printStackTrace()
             }
         })
 
@@ -71,15 +72,17 @@ class PlayerListActivity : AppCompatActivity() {
 
                     override fun onFailure(call: Call<Player>, t: Throwable) {
                         Toast.makeText(this@PlayerListActivity, "Oopsies", Toast.LENGTH_SHORT).show()
+                        t.printStackTrace()
                     }
                 })
-                return false
+                return true
             }
             override fun onQueryTextChange(newText: String?): Boolean {
-                return false
+                return true
             }
         })
 
     }
+
 
 }
